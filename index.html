@@ -23,8 +23,8 @@
 				<div v-for="(slide, index) in slidesArray" :class="index == currentSlide ? 'thumb active' : 'thumb'">
 					<img @click="currentSlide=index":src="slidesArray[index].items" :alt="slidesArray[currentSlide].title">
 				</div>
-				<button @click="next" class="btn-control btn-previus">&and;</button>
-				<button @click="prev" class="btn-control btn-next">&or;</button>
+				<button @click="prev" class="btn-control btn-previus">&and;</button>
+				<button @click="next" class="btn-control btn-next">&or;</button>
 			</div>
 		</div>
 	</div>
