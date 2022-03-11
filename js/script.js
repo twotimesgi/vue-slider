@@ -33,10 +33,10 @@ var root = new Vue({
     },
     methods:{
         next: function(){
-            if(this.currentSlide < this.slidesArray.length - 1) this.currentSlide++;
+            this.currentSlide < this.slidesArray.length - 1 ? this.currentSlide++ : this.currentSlide = 0;
         },
         prev: function(){
-            if(this.currentSlide > 0) this.currentSlide--;
+            this.currentSlide > 0 ? this.currentSlide-- : this.currentSlide = this.slidesArray.length - 1;
         },
         startTimer: function(){
             this.timer = setInterval(this.next,4000);
